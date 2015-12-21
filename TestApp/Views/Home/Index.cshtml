@@ -1,0 +1,17 @@
+﻿@model TestApp.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Home page</h1>
+Date Now: @Model.Date
+
+<form action="/Home/Add">
+    <input type="datetime" value="@Model.Date" name="date" />
+    <input type="submit" value="Add"/>
+</form>
+<form action="/api/home" method="post">
+    <input type="datetime" value="2011-10-05T14:48:00.000Z" name="date" />
+    <input type="submit" value="Add api" />
+</form>
